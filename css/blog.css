@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/background.png);
+}
+
+nav{
+   background-color: rgb(129, 115, 115); 
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+nav >ul{
+    display:flex;
+    justify-content: center;
+}
+
+.theNav{
+    margin-left: 1.5rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper{
+    min-height: 100vh;
+    background-color: white;
+    opacity: 0.9;
+}
+
+/* .carousel > img{
+    width: 100%;
+    height: 25rem;
+} */
+
+h1{
+    text-align: center;
+    margin: 0;
+    padding-top: 3rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+}
+
