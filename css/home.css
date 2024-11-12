@@ -1,53 +1,74 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-image: url(../img/background.png);
 }
 
-nav{
-   background-color: rgb(129, 115, 115); 
-   padding-top: 2rem;
-   padding-bottom: 2rem;
+nav {
+    background-color: rgb(129, 115, 115);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-nav >ul{
-    display:flex;
+nav>ul {
+    display: flex;
     justify-content: center;
 }
 
-.theNav{
+.theNav {
     margin-left: 1.5rem;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-.wrapper{
+.wrapper {
     min-height: 100vh;
     background-color: white;
     opacity: 0.9;
 }
 
-.carousel > img{
+.carousel>img {
     width: 100%;
     height: 25rem;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 0;
     padding-top: 2rem;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
     background-color: bisque;
 }
 
+
+/* New Section  */
+.cofeeshopMenu {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    padding: 0.7rem;
+    margin-top: 2rem;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.cardImg {
+    object-fit: cover;
+    border-radius: 0.625rem;
+    width: 20rem;
+    height: 20rem;
+}
