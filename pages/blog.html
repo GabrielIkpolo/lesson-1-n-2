@@ -8,7 +8,7 @@
     <meta name="keywords" content="black cofee, with cream, sugar">
     <meta name="description" content=" an online cofees shop to order cofee">
     <meta name="robot" content="index, follow">
-    <link rel="icon" href="../img/logo.png">
+    <link rel="icon" href="../img/c1.jpeg">
     <link rel="stylesheet" href="../css/blog.css">
     <title>Cofeeshop</title>
 </head>
@@ -24,17 +24,43 @@
     </nav>
 
     <div class="wrapper">
-
-
-        
-
         <h1>Welcome to our Blog</h1>
+
+
+        <form class="formOne" action="">
+            <input class="theInputs" type="text" name="inputOne" placeholder="Enter a text value">
+            <input class="theInputs" type="text" name="inputTwo" placeholder="Enter a text value">
+            <button class="theInputs" id="submit" type="submit">Submit</button>
+        </form>
+
+
+        <p class="answer"></p>
+
+
     </div>
+
+    
 
     <div class="footer">
         <p>&copy; Cofeeshop</p>
     </div>
+    <script src="../js/index.js"></script>
 
+    <script>
+        const one = document.querySelector('[name="inputOne"]');
+        const two = document.querySelector('[name="inputTwo"]');
+        const submit = document.querySelector('#submit');
+        const answer = document.querySelector('.answer');
+
+        submit.addEventListener('click', (e)=>{
+            e.preventDefault();
+            console.log("button was clicked");
+            console.log(one.value);
+            console.log(two.value);
+            console.log(answer.textContent = `${one.value}  ${two.value}`);
+            answer.textContent;
+        })
+
+    </script>
 </body>
 
-</html>

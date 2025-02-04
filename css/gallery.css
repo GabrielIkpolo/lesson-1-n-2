@@ -6,8 +6,11 @@ body{
 
 nav{
    background-color: rgb(129, 115, 115); 
-   padding-top: 2rem;
-   padding-bottom: 2rem;
+   padding-top: 1.5rem;
+   padding-bottom: 1.5rem;
+   position: sticky;
+   top: 0%;
+   z-index: 1;
 }
 
 nav >ul{
