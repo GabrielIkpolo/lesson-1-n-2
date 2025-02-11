@@ -1,3 +1,3 @@
 window.addEventListener('load',()=>{
-   alert("Windows has loaded");
+   // alert("Windows has loaded");
 });
