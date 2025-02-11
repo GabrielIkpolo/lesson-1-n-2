@@ -31,6 +31,8 @@
             <input class="theInputs" type="text" name="inputOne" placeholder="Enter a text value">
             <input class="theInputs" type="text" name="inputTwo" placeholder="Enter a text value">
             <button class="theInputs" id="submit" type="submit">Submit</button>
+            <br>
+            <textarea type="number" class="answerText" ></textarea>
         </form>
 
 
@@ -51,6 +53,7 @@
         const two = document.querySelector('[name="inputTwo"]');
         const submit = document.querySelector('#submit');
         const answer = document.querySelector('.answer');
+        const answerText = document.querySelector('.answerText');
 
         submit.addEventListener('click', (e)=>{
             e.preventDefault();
@@ -59,6 +62,9 @@
             console.log(two.value);
             console.log(answer.textContent = `${one.value}  ${two.value}`);
             answer.textContent;
+            console.log(answerText);
+            answerText.value = parseInt(one.value)  + parseInt(two.value);
+            
         })
 
     </script>
