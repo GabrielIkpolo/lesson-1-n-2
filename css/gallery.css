@@ -4,18 +4,37 @@ body{
     background-image: url(../img/background.png);
 }
 
-nav{
-   background-color: rgb(129, 115, 115); 
-   padding-top: 1.5rem;
-   padding-bottom: 1.5rem;
-   position: sticky;
-   top: 0%;
-   z-index: 1;
+nav {
+    background-color: rgb(129, 115, 115);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
-nav >ul{
-    display:flex;
+nav>ul {
+    display: flex;
     justify-content: center;
+    margin: 0;
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-left: 0.9rem;
+}
+
+.logo img {
+    
+    width: 3rem;
+    height: auto; 
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .theNav{
