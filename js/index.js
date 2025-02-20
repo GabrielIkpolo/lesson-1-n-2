@@ -21,7 +21,7 @@ window.onclick = function(event) {
 }
 
 
-//== JavaScript to control the cart dropdown ==
+// == JavaScript to control the cart dropdown ==
 const shoppingCart = document.querySelector('.shopping_cart');
 const cartDropdown = document.querySelector('.cart_dropdown');
 
@@ -39,3 +39,7 @@ document.addEventListener('click', (e) => {
         cartDropdown.classList.remove('show');
     }
 });
+
+
+
+

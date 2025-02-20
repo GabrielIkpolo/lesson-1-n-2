@@ -167,7 +167,7 @@ h1 {
     overflow: hidden;
 }
 
-/* Optional: Add a cart dropdown */
+/* Optional: Add a cart dropdown  */
 .cart_dropdown {
     display: none;
     position: absolute;
@@ -200,6 +200,7 @@ h1 {
 .cart_dropdown li:last-child {
     border-bottom: none;
 }
+
 
 .empty_cart {
     padding: 1rem;
