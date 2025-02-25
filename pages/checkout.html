@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Gabriels">
+    <meta name="keywords" content="black coffee, with cream, sugar">
+    <meta name="description" content=" an online coffee shop to order coffee">
+    <meta name="robot" content="index, follow">
+    <link rel="icon" href="../img/c1.jpeg">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <title>Checkout</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><a href="../index.html"><img src="../img/coffeeshop-logo.jpeg" alt="Cofeeshop Logo"></a></div>
+        <ul>
+            <li> <a href="../index.html">Home</a></li>
+            <li class="theNav"><a href="./about.html">About</a></li>
+            <li class="theNav"><a href="./blog.html">Blog</a></li>
+            <li class="theNav"><a href="./gallery.html">Gallery</a></li>
+        </ul>
+
+        <div class="login-link">
+            <a href="#" class="open-modal">Login</a>
+        </div>
+
+        <div class="shopping_cart">
+            <a href="#cart.html">
+                <img src="../img/cart.png" alt="Shopping Cart" class="cart_icon">
+                <span class="cart_count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <h1>Checkout</h1>
+
+        <section class="checkout-section">
+            <div class="checkout-items">
+                <ul id="checkout-list"></ul>
+            </div>
+
+            <div class="total">
+                <p class="bold">Total:</p>
+                <p class="price bold" id="checkout-total">₦0</p>
+            </div>
+
+            <div class="decisionForCart">
+                <button class="clear-cart" onclick="clearCart()">Clear</button>
+                <button class="checkout-cart" onclick="proceedToPayment()">Proceed to Payment</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Cofeeshop</p>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/checkout.js"></script>
+</body>
+
+</html>

@@ -41,7 +41,7 @@ populateCoffeeMenu();
 
 //== Adding Items to cart and updating display ===
 
-let cartItems = [];
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 const addToCart = (name, price) => {
     const existingItem = cartItems.find(item => item.name == name);
@@ -50,6 +50,8 @@ const addToCart = (name, price) => {
     } else {
         cartItems.push({ name, price, quantity: 1 });
     }
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
     updateCart();
 };
@@ -71,7 +73,7 @@ const updateCart = () => {
             </div>
             <p class="cart_quantity">x${item.quantity}</p>
         `;
-        
+
         cartList.appendChild(li);
 
         total += item.price * item.quantity;
@@ -95,9 +97,9 @@ document.addEventListener('click', (event) => {
 
 //== Update Cart Count =========
 
-const updateCartCount = ()=>{
+const updateCartCount = () => {
     const cartCount = document.querySelector('.cart_count');
-    cartCount.textContent = cartItems.reduce((total, item) => total +  item.quantity, 0);
+    cartCount.textContent = cartItems.reduce((total, item) => total + item.quantity, 0);
 }
 
 
@@ -105,6 +107,7 @@ const updateCartCount = ()=>{
 document.addEventListener('DOMContentLoaded', () => {
     populateCoffeeMenu();
     updateCartCount(); // Initialize the cart count
+    updateCart();
 });
 
 
@@ -158,3 +161,28 @@ window.onclick = (event) => {
 };
 
 
+// Clear cart items 
+const clearCart = () => {
+    cartItems = [];
+    localStorage.setItem('cartItem', JSON.stringify(cartItems));
+    updateCart();
+    updateCartCount();
+};
+
+
+document.querySelector('.clear-cart').addEventListener("click", clearCart);
+
+
+// Checkout Functionality 
+
+const checkout = () => {
+    if (cartItems.length > 0) {
+        localStorage.setItem('checkoutItems', JSON.stringify(cartItems));
+        window.location.href = './pages/checkout.html';
+    } else {
+        alert("Your cart is empty. Please add items to proceed to checkout");
+    }
+};
+
+document.querySelector('.checkout-cart')
+    .addEventListener('click', checkout);

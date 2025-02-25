@@ -389,6 +389,10 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0.5rem;
+    /* sets max hiegt for list*/
+    max-height: 20rem;
+    /* Enables vertical scrolling */
+    overflow-y: auto;
 }
 
 .cart-modal .modal-content li {
@@ -408,7 +412,7 @@ h1 {
     margin-top: 1rem;
 }
 
-.cart-modal .modal-content .total .bold  {
+.cart-modal .modal-content .total .bold {
     font-weight: bold;
 }
 
@@ -416,11 +420,11 @@ h1 {
     color: #333;
 }
 
-.closeCart:hover{
+.closeCart:hover {
     cursor: pointer;
 }
 
-.imageProducts{
+.imageProducts {
     width: 40px;
     height: 40px;
     object-fit: cover;
@@ -434,7 +438,8 @@ h1 {
     padding: 0.75rem 1.5rem;
     font-size: 0.7rem;
     color: #fff;
-    background-color: #28a745; /* Green color */
+    background-color: #28a745;
+    /* Green color */
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -444,25 +449,29 @@ h1 {
 
 /* Hover state */
 .add-to-cart:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
+    /* Darker green on hover */
     transform: scale(1.05);
 }
 
 /* Focus state */
 .add-to-cart:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5); /*Green outline on focus */
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5);
+    /*Green outline on focus */
 }
 
 /* Active state */
 .add-to-cart:active {
-    background-color: #1e7e34; /* Even darker green on active */
+    background-color: #1e7e34;
+    /* Even darker green on active */
     transform: scale(0.98);
 }
 
 /* Disabled state */
 .add-to-cart:disabled {
-    background-color: #ced4da; /* Light gray for disabled */
+    background-color: #ced4da;
+    /* Light gray for disabled */
     cursor: not-allowed;
     box-shadow: none;
 }
@@ -474,15 +483,15 @@ h1 {
         font-size: 0.875rem;
     }
 
-    .closeCart{
+    .closeCart {
         cursor: pointer;
     }
 }
 
 /* Arranging the button  */
-.decisionForCart{
- display: flex;
- justify-content: center;
- justify-items: center;
- gap: 0.5rem;
+.decisionForCart {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    gap: 0.5rem;
 }
