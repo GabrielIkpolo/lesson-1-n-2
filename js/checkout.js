@@ -26,6 +26,7 @@ const populateCheckout = () => {
                 <p class="cart_price">₦${item.price}</p>
             </div>
             <p class="cart_quantity">x${item.quantity}</p>
+            <span class="removeInternalItem" data-name="${item.name}">&times;</span>
         `;
 
         checkoutList.appendChild(li);
@@ -36,6 +37,18 @@ const populateCheckout = () => {
     const totalElement = document.querySelector('#checkout-total');
     totalElement.textContent = `₦${total}`;
 };
+
+
+// Event lister to remove items from the checkout list
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('removeInternalItem')) {
+        const name = event.target.dataset.name;
+        checkoutItems = checkoutItems.filter(item => item.name !== name);
+        localStorage.setItem('checkoutItems', JSON.stringify(checkoutItems));
+        populateCheckout();
+    }
+});
+
 
 const clearCart = () => {
     checkoutItems = [];

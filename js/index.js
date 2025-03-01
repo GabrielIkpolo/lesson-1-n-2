@@ -72,6 +72,7 @@ const updateCart = () => {
                 <p class="cart_price">₦${item.price}</p>
             </div>
             <p class="cart_quantity">x${item.quantity}</p>
+            <span class="removeInternalItem" data-name="${item.name}">&times;</span>
         `;
 
         cartList.appendChild(li);
@@ -86,11 +87,24 @@ const updateCart = () => {
     updateCartCount(); // Update the cart count
 };
 
+// Event listener to add items from the home page to the cart
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('add-to-cart')) {
         const name = event.target.dataset.name;
         const price = parseInt(event.target.dataset.price);
         addToCart(name, price);
+    }
+});
+
+
+// Add event listener to remove items from the cart internally
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('removeInternalItem')) {
+        const name = event.target.dataset.name;
+        cartItems = cartItems.filter(item => item.name !== name);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCart();
+        updateCartCount();
     }
 });
 

@@ -18,3 +18,10 @@
     width: 50%;
     margin: auto;
 }
+
+/* Styling the internal removeInternalItem  */
+.removeInternalItem{
+    color: red;
+    cursor: pointer;
+    margin-left: 1rem;
+}
