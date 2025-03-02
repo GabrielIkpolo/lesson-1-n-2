@@ -5,23 +5,105 @@
 
 .checkoutTitle {
     margin-top: 0rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 .checkoutSection{
     display: flex;
-    justify-content: center;
     justify-items: center;
     grid-row: 1;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     margin: auto;
 }
 
-/* Styling the internal removeInternalItem  */
-.removeInternalItem{
+
+/* checkout.css */
+.checkout-items li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout-items li .removeInternalItem {
     color: red;
     cursor: pointer;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.checkout-items li .cart_item,
+.checkout-items li .cart_price,
+.checkout-items li .cart_quantity {
+    margin-right: 1rem;
+}
+
+.total{
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    font-weight: bolder;
+}
+
+
+.decisionForCart{
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Button styles */
+.clear-cart,
+.checkout-cart {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.7rem;
+    color: #fff;
+    background-color: rgb(129, 115, 115);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+/* Hover state */
+.clear-cart:hover,
+.checkout-cart:hover {
+    background-color: rgb(240, 160, 160);
+    transform: scale(1.05);
+}
+
+/* Focus state */
+.clear-cart:focus,
+.checkout-cart:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5);
+}
+
+/* Active state */
+.clear-cart:active,
+.checkout-cart:active {
+    background-color: rgb(100, 85, 85);
+    transform: scale(0.98);
+}
+
+/* Disabled state */
+.clear-cart:disabled,
+.checkout-cart:disabled {
+    background-color: #ced4da;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .clear-cart,
+    .checkout-cart {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
 }
